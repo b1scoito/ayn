@@ -1,10 +1,6 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// All of the Node.js APIs are available in this process.
 const remote = require('electron').remote;
 
 (function handleWindowControls() {
-    // When document has loaded, initialise
     document.onreadystatechange = () => {
         if (document.readyState == "complete") {
             init();
@@ -35,9 +31,6 @@ const remote = require('electron').remote;
             toggleMaxRestoreButtons();
         });
 
-        // Toggle maximise/restore buttons when maximisation/unmaximisation
-        // occurs by means other than button clicks e.g. double-clicking
-        // the title bar:
         toggleMaxRestoreButtons();
         window.on('maximize', toggleMaxRestoreButtons);
         window.on('unmaximize', toggleMaxRestoreButtons);
