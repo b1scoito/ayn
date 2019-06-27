@@ -15,8 +15,52 @@ html {
     box-sizing: inherit;
 }
 
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar:hover {
+    width: 6px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px none #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #a6a6a6;
+}
+
+::-webkit-scrollbar-track {
+    background: #1d1e1f;
+    border: 1px none #ffffff;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #4b5a68;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #4b5a68;
+}
+
+
 html,
 body {
+    user-select: none;
     height: 100%;
     margin: 0;
 }
@@ -145,6 +189,23 @@ h1 {
     margin: 0 0 10px 0;
     font-weight: 600;
     line-height: 1.2;
+}
+
+.input-field textarea:focus+label {
+    color: #6200ee !important;
+}
+
+.input-field textarea:focus {
+    border-bottom: 1px solid #6200ee !important;
+    box-shadow: 0 1px 0 0 #6200ee !important
+}
+
+textarea {
+    color: white;
+}
+
+option {
+    color: white;
 }
 
 p {

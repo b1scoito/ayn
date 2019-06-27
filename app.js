@@ -10,8 +10,9 @@ function createWindow() {
     width: 1000,
     height: 600,
     frame: false,
-    'minHeight': 300,
-    'minWidth': 500,
+    'minHeight': 634,
+    'minWidth': 654,
+    icon: './icon.png',
     backgroundColor: '#FFF',
     webPreferences: {
       nodeIntegration: true

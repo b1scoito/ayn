@@ -3,9 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>ayn</title>
+  <title>ayn.minebot</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -36,10 +38,73 @@
   </header>
 
   <div id="main">
-    <h1>ayn.</h1>
-    
+
+    <div class="container">
+
+      <div class="row">
+        <div class="section">
+          <h5>Setup!</h5>
+          <p>Stuff</p>
+          <div class="col s12">
+            <div class="input-field">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Server Address</label>
+            </div>
+          </div>
+          <div class="col s6">
+            <button class="mdc-button mdc-button--raised" id="btn-send">Send Brou</button>
+          </div>
+          <div class="col s6">
+            <label>Select Minecraft Version</label>
+            <select id="mc-versions">
+              <optgroup label="1.8.x">
+                <option value="1">1.8.9</option>
+              </optgroup>
+              <optgroup label="1.9.x">
+                <option value="2">1.9</option>
+              </optgroup>
+              <optgroup label="1.10.x">
+                <option value="3">1.10.1</option>
+                <option value="4">1.10.2</option>
+              </optgroup>
+              <optgroup label="1.11.x">
+                <option value="5">1.11.1</option>
+                <option value="6">1.11.2</option>
+              </optgroup>
+              <optgroup label="1.12.x">
+                <option value="7">1.12.1</option>
+                <option value="8">1.12.2</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <h5>Section 2</h5>
+        <p>Stuff</p>
+      </div>
+      <div class="section">
+        <h5>Section 3</h5>
+        <p>Stuff</p>
+      </div>
+
+    </div>
+
     <script>
-      require('./renderer.js')
+      if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+      }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+
+    <script>
+      if (window.module) module = window.module;
     </script>
 </body>
 
