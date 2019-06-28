@@ -7,8 +7,8 @@ let mainWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 1000,
-    height: 600,
+    width: 654,
+    height: 634,
     frame: false,
     'minHeight': 634,
     'minWidth': 654,
@@ -19,7 +19,7 @@ function createWindow() {
     }
   })
   mainWindow.loadFile('index.html');
-//  mainWindow.webContents.openDevTools();
+  //  mainWindow.webContents.openDevTools();
 
   mainWindow.on('closed', function () {
     mainWindow = null;
