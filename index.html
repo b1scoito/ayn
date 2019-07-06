@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <title>ayn.minebot</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/titlebar.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/scrollbar.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,12 +24,6 @@
         <div class="button" id="min-button">
           <span>&#xE921;</span>
         </div>
-        <div class="button" id="max-button">
-          <span>&#xE922;</span>
-        </div>
-        <div class="button" id="restore-button">
-          <span>&#xE923;</span>
-        </div>
         <div class="button" id="close-button">
           <span>&#xE8BB;</span>
         </div>
@@ -36,28 +31,62 @@
       </div>
     </div>
   </header>
+
   <div id="main">
-
-    <div id="hover-box" style="display:none"></div>
+    <div id="hover-box" style="display:none">
+      <img class="responsive-image" src="" id="imgtwerk">
+    </div>
     <div class="container">
-
       <div class="row">
         <div class="section">
-          <h5>Coisa 1</h5>
-          <p>Stuff</p>
+          <h5>set an target</h5>
           <div class="col s12">
             <div class="input-field">
               <textarea id="server-address" class="materialize-textarea"></textarea>
               <label for="server-address">Server Address</label>
-              <span class="helper-text">Could be either IP Address or Hostname, formats (ip:port) are accept too.</span>
+              <span class="helper-text">Should be either IP Address or Hostname, formats (ip:port) are accepted
+                too.</span>
             </div>
-            <div class="input-field">
-              <textarea id="accounts" class="materialize-textarea"></textarea>
-              <label for="accounts">Accounts</label>
-            </div>
+            <form action="#">
+              <a id="select-dir" class="waves-effect waves-light hoverable btn">Select</a>
+              <div class="input-field">
+                <textarea disabled id="file-accs" class="materialize-textarea"></textarea>
+                <span class="helper-text">Format should be 'email:password' (premium account) or 'username' (non-premium
+                  account)</span>
+              </div>
+              <div class="col s3">
+                <p>
+                  <label>
+                    <input name="account-type" type="radio" checked />
+                    <span>Linear</span>
+                  </label>
+                </p>
+              </div>
+              <div class="col s3">
+                <p>
+                  <label>
+                    <input name="account-type" type="radio" />
+                    <span>Random</span>
+                  </label>
+                </p>
+              </div>
+              <div class="col s3">
+                <p>
+                  <label>
+                    <input name="account-type" type="radio" />
+                    <span>TheAltening</span>
+                  </label>
+                </p>
+              </div>
+            </form>
           </div>
           <div class="col s6">
-            <button class="mdc-button mdc-button--raised" id="btn-send">Send Brou</button>
+            <a id="btn-send" class="waves-effect waves-light hoverable btn"><i
+                class="material-icons right">send</i>Send</i></a>
+            <a id="btn-settings" href="pages/settings.html" class="waves-effect waves-light hoverable btn"><i
+                class="material-icons middle">settings</i></a>
+            <a id="btn-scripting" href="pages/scripting.html"
+              class="waves-effect waves-light hoverable btn">scripting</a>
           </div>
           <div class="col s6">
             <label>Select Minecraft Version</label>
@@ -84,15 +113,6 @@
           </div>
         </div>
       </div>
-      <div class="section">
-        <h5>Coisa 2</h5>
-        <p>Stuff</p>
-      </div>
-      <div class="section">
-        <h5>Coisa 3</h5>
-        <p>Stuff</p>
-      </div>
-      
     </div>
 
     <script>
@@ -102,11 +122,11 @@
       }
     </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/smooth-scroll.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/smooth-scroll.js"></script>
 
     <script>
       if (window.module) module = window.module;

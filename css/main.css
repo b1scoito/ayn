@@ -15,48 +15,6 @@ html {
     box-sizing: inherit;
 }
 
-
-::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-}
-
-::-webkit-scrollbar:hover {
-    width: 6px;
-    height: 3px;
-}
-
-::-webkit-scrollbar-button {
-    width: 0px;
-    height: 0px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #6200ee;
-    border: 0px none #6200ee;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #6200ee;
-}
-
-::-webkit-scrollbar-thumb:active {
-    background: #5d03da;
-}
-
-::-webkit-scrollbar-track {
-    background: #1d1e1f;
-    border: 1px none #6200ee;
-}
-
-::-webkit-scrollbar-track:hover {
-    background: #2b2d2e;
-}
-
-::-webkit-scrollbar-track:active {
-    background: #2e2f31;
-}
-
 html,
 body {
     user-select: none;
@@ -75,113 +33,6 @@ body {
     overflow-y: hidden;
 }
 
-
-
-#titlebar {
-    display: block;
-    position: fixed;
-    height: 32px;
-    width: calc(100% - 2px);
-}
-
-#titlebar {
-    padding: 4px;
-}
-
-#titlebar #drag-region {
-    width: 100%;
-    height: 100%;
-    -webkit-app-region: drag;
-}
-
-#titlebar {
-    color: #FFF;
-}
-
-#titlebar #drag-region {
-    display: grid;
-    grid-template-columns: auto 138px;
-}
-
-#window-title {
-    grid-column: 1;
-    display: flex;
-    align-items: center;
-    margin-left: 8px;
-    overflow-x: hidden;
-    font-family: "Segoe UI", sans-serif;
-    font-size: 12px;
-}
-
-#window-title span {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.5;
-}
-
-#window-controls {
-    display: grid;
-    grid-template-columns: repeat(3, 46px);
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    font-family: "Segoe MDL2 Assets";
-    font-size: 10px;
-}
-
-#window-controls {
-    -webkit-app-region: no-drag;
-}
-
-#window-controls .button {
-    grid-row: 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-#window-controls .button {
-    user-select: none;
-    cursor: default;
-    color: #FFF;
-}
-
-#window-controls .button:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #FFF;
-}
-
-#window-controls #min-button {
-    grid-column: 1;
-}
-
-#window-controls #max-button,
-#window-controls #restore-button {
-    grid-column: 2;
-}
-
-#window-controls #restore-button {
-    display: none;
-}
-
-#window-controls #close-button {
-    grid-column: 3;
-}
-
-#window-controls #close-button:hover {
-    background: #E81123;
-}
-
-#main {
-    height: calc(100% - 32px);
-    margin-top: 32px;
-    padding: 20px;
-    overflow-y: auto;
-}
-
 h1 {
     margin: 0 0 10px 0;
     font-weight: 600;
@@ -190,6 +41,38 @@ h1 {
 
 .input-field textarea:focus+label {
     color: #6200ee !important;
+}
+
+input.valid:not([type]),
+input.valid:not([type]):focus,
+input.valid[type=text]:not(.browser-default),
+input.valid[type=text]:not(.browser-default):focus,
+input.valid[type=password]:not(.browser-default),
+input.valid[type=password]:not(.browser-default):focus,
+input.valid[type=email]:not(.browser-default),
+input.valid[type=email]:not(.browser-default):focus,
+input.valid[type=url]:not(.browser-default),
+input.valid[type=url]:not(.browser-default):focus,
+input.valid[type=time]:not(.browser-default),
+input.valid[type=time]:not(.browser-default):focus,
+input.valid[type=date]:not(.browser-default),
+input.valid[type=date]:not(.browser-default):focus,
+input.valid[type=datetime]:not(.browser-default),
+input.valid[type=datetime]:not(.browser-default):focus,
+input.valid[type=datetime-local]:not(.browser-default),
+input.valid[type=datetime-local]:not(.browser-default):focus,
+input.valid[type=tel]:not(.browser-default),
+input.valid[type=tel]:not(.browser-default):focus,
+input.valid[type=number]:not(.browser-default),
+input.valid[type=number]:not(.browser-default):focus,
+input.valid[type=search]:not(.browser-default),
+input.valid[type=search]:not(.browser-default):focus,
+textarea.materialize-textarea.valid,
+textarea.materialize-textarea.valid:focus,
+.select-wrapper.valid>input.select-dropdown {
+    border-bottom: 1px solid #6200ee !important;
+    box-shadow: 0 1px 0 0 #6200ee !important;
+    color: #FFF !important;
 }
 
 .input-field textarea:focus {
@@ -206,8 +89,9 @@ option {
 }
 
 p {
-    margin-top: 10px;
-    color: rgba(255, 255, 255, 0.4);
+    margin-top: 0px;
+    padding-bottom: 15px;
+    color: rgba(255, 255, 255, 0.404);
 }
 
 .optgroup {
@@ -245,11 +129,34 @@ input.select-dropdown {
     color: #9e9e9e !important;
 }
 
+.btn,
+.btn-large,
+.btn-small,
+.btn:hover {
+    background-color: #6200ee !important;
+}
+
 #hover-box {
     z-index: 100;
-    height: 71px;
-    width: 400px;
+    height: 64px;
+    width: 325px;
     background-color: #1a1a1a;
     position: fixed;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+[type="checkbox"].filled-in:checked+span:not(.lever):after {
+    border: #6200ee !important;
+    background-color: #6200ee !important;
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:after {
+    background-color: #6200ee !important;
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after {
+    border: 2px solid #6200ee !important;
 }

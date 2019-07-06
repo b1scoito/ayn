@@ -7,19 +7,20 @@ let mainWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 654,
-    height: 634,
+    width: 725,
+    height: 439,
     frame: false,
-    'minHeight': 634,
-    'minWidth': 654,
+    'minHeight': 439,
+    'minWidth': 725,
     icon: './icon.png',
     backgroundColor: '#FFF',
     webPreferences: {
       nodeIntegration: true
-    }
+    },
+    resizable: false
   })
   mainWindow.loadFile('index.html');
-  //  mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   mainWindow.on('closed', function () {
     mainWindow = null;
