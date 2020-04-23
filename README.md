@@ -1,3 +1,3 @@
-# aynminebot
+# ayn
 
-aynminebot is a simple, lua scriping based minecraft bot.
+ayn is a simple, node scriping based minecraft bot.

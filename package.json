@@ -1,29 +1,29 @@
 {
-  "name": "aynminebot",
+  "name": "ayn",
   "version": "1.0.0",
-  "description": "aynminebot is a simple, lua scriping based minecraft bot.",
+  "description": "ayn is a simple, node scriping based minecraft bot.",
   "main": "app.js",
   "scripts": {
     "start": "electron app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/b1scoito/aynminebot.git"
+    "url": "git+https://github.com/b1scoito/ayn.git"
   },
   "keywords": [
     "minecraft",
     "bot",
-    "minebot",
+    "minecraft bot",
     "aynminebot"
   ],
-  "author": "b1scoito",
+  "author": "biscoito",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/b1scoito/aynminebot/issues"
+    "url": "https://github.com/b1scoito/ayn/issues"
   },
-  "homepage": "https://github.com/b1scoito/aynminebot#readme",
+  "homepage": "https://github.com/b1scoito/ayn#readme",
   "devDependencies": {
-    "electron": "^5.0.6"
+    "electron": "^5.0.12"
   },
   "dependencies": {}
 }
